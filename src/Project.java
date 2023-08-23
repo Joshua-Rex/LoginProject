@@ -4,7 +4,7 @@ public class Project {
     public static void main(String[] args) {
         // First set = Usernames | Second set = Passwords
         // Username = Admin | Password = Password
-        String[][] accounts = { {"Admin", "Password"}, {"Ash", "Pikachu"}, {"Link", "Zelda"}, {"Mario", "Peach"}, {"Katarina", "Garen"} };
+        String[][] accounts = { {"Admin", "password"}, {"Ash", "pikachu"}, {"Link", "zelda"}, {"Mario", "peach"}, {"Katarina", "garen"} };
 
         // Scanner for collecting inputs
         Scanner input = new Scanner(System.in);
@@ -38,7 +38,7 @@ public class Project {
         for (int i = 0; i < 3; i++) {
             System.out.print("Enter Password: ");
             inputDetails = input.nextLine();
-            if (passHolder.equals(inputDetails)) {
+            if (passHolder.equals(inputDetails.toLowerCase())) {
                 breakOut = true;
                 break;
             }
