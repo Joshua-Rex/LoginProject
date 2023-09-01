@@ -6,12 +6,14 @@ public class Project {
 
         // Scanner for collecting inputs
         Scanner input = new Scanner(System.in);
+
+        // Login class for account verification
         Login l = new Login();
         // inputDetails stores the answer from the user, passHolder stores the password associated with the username
         String inputDetails;
         String passHolder;
 
-        // breakOut confirms if the user entered a corrected username and password
+        // breakOut confirms if the user entered the correct password
         boolean breakOut = false;
 
         // Forces the user to enter a username that is currently stored in the array
@@ -20,13 +22,6 @@ public class Project {
             System.out.print("Enter username: ");
             inputDetails = input.nextLine();
             passHolder = l.UsernameCheck(inputDetails);
-//            for (String[] account : accounts) {
-//                if (account[0].equals(inputDetails)) {
-//                    breakOut = true;
-//                    passHolder = account[1];
-//                    break;
-//                }
-//            }
         } while (passHolder == null);
 
         // Gives the user 3 tries to correctly get the password for the account
